@@ -3,5 +3,10 @@ A nossa página Web apresentará 4 telas, a primeira de login, a segunda será u
 ## TELA1
 ## TELA2
 ## TELA3 (Formulário)
+No arquivo "index.html" está presente o design do formulário. O código html foi dividido em style,body e script.
+
+    <style>Utilizando CSS para deixar o design dos campos e botões mais bonitos </style>
+    <body>Toda a estrutura dos campos e botões do formulário </body>
+    <script>O request da API de testes é criado aqui!</script>
 
 ## TELA4
