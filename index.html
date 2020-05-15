@@ -1,114 +1,39 @@
-<div> 
-    <head>
-      Formulário - Cadastro das Comissões
-      </head><br>
-      <br>
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulário</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div>
+		<h1>Formulário - Cadastro das Comissões</h1>
+		<form id="form" method="post" >
+			<label for="nome">Nome da Comissão</label><br>
+			<input type="text" id="name" placeholder="Nome"><br>
 
-    <style>
-        input[type=text], select {
-  width: 25%;
-  padding: 14px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+			<label for="empresa">Empresa Contratada</label><br>
+			<input type="text" id="empresa" placeholder="Empresa"><br>
 
-input[type=submit] {
-  width: 25%;
-  background-color: #0000FF;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+			<label for="gastos">Gastos</label><br>
+			<input type="text" id="gastos" placeholder="Gastos"><br>
 
-input[type=email] {
-  width: 25%;
-  padding: 14px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+			<label for="ano">Semestre da formatura</label><br>
+			<input type="text" id="ano" placeholder="Primeiro/Segundo/Ano"><br>
 
-input[type=submit]:hover {
-  background-color: #0000FF;
-}
+			<label for="preco">Preço da adesão</label><br>
+			<input type="text" id="price" placeholder="R$ 00,00"><br>
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 2px;
-}
-    </style>  
+			<label for="email">Email</label><br>
+			<input type="email" id="email" placeholder="xpto@email.com"><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
 
-    <body>
-     <form id="form" method="post" >
-      <label for="nome">Nome da Comissão</label><br>
-      <input type="text" id="name" placeholder="Nome"><br>
-       
-      <label for="empresa">Empresa Contratada</label><br>
-      <input type="text" id="empresa" placeholder="Empresa"><br>
-       
-      <label for="gastos">Gastos</label><br>
-      <input type="text" id="gastos" placeholder="Gastos"><br>
-       
-      <label for="ano">Semestre da formatura</label><br>
-      <input type="text" id="ano" placeholder="Primeiro/Segundo/Ano"><br>
-       
-      <label for="preco">Preço da adesão</label><br>
-      <input type="text" id="price" placeholder="R$00,00"><br>
-       
-      <label for="email">Email</label><br>
-      <input type="email" id="email" placeholder="xpto@email.com"><br>
-    </body> 
-       
-      <input type="submit" value="Submit">
-     </form>
-    </body> 
-
-    <script>
-var form = document.getElementById('form')
-
-form.addEventListener('submit', function(e){
-  
-  //auto submission of the form
-  
-  e.preventDefault()
-  
-  var name = document.getElementById('name').value
-  var empresa = document.getElementById('empresa').value
-  var gastos = document.getElementById('gastos').value
-  //var ano = document.getElementById('ano').value
- // var price = document.getElementById('price').value
-  //var email = document.getElementById('email').value
-  
-  //fetch post request
-  
-  fetch('https://jsonplaceholder.typicode.com/posts',{
-    method:'POST',
-    body:JSON.stringify({
-      title:name,
-      body:empresa,
-      id:ano           
-    }),
-    headers:{
-      "Content-Type":"application/json; charset=UTF-8"
-    }
-  })
-  .then(function(response){
-    return response.json()
-  })
-  .then(function(data){
-    console.log(data)
-  })
-  })
-
-    </script>
-    <div>  
-    
+	<script src="js/vendor/modernizr-3.8.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"</script>
+	<script src="js/main.js"></script>
+</body>
+</html>
