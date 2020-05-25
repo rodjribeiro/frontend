@@ -1,5 +1,5 @@
 $(document).ready(() => {
-	fetch('http://localhost:4000/api/users')
+	fetch('https://dutiful-accomplished-arthropods.gigalixirapp.com/api/users')
 		.then(response => response.json())
 		.then(json => json['data'])
 		.then(json => {
@@ -11,7 +11,7 @@ $(document).ready(() => {
 			$('#comissoes li a').each((i, a) => {
 				let $a = $(a);
 				$a.click(() => {
-					fetch(`http://localhost:4000/api/users/${$a.attr('id')}`)
+					fetch(`https://dutiful-accomplished-arthropods.gigalixirapp.com/api/users/${$a.attr('id')}`)
 						.then(response => response.json())
 						.then(json => json['data'])
 						.then(json => {
@@ -35,7 +35,7 @@ $(document).ready(() => {
 function delete_user(id) {
 	$.ajax({
 		type: 'DELETE',
-		url: `http://localhost:4000/api/users/${id}`,
+		url: `https://dutiful-accomplished-arthropods.gigalixirapp.com/api/users/${id}`,
 		success: () => {
 			window.alert("Sucesso");
 			window.location.replace("listagem.html");

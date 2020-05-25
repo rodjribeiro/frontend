@@ -8,7 +8,7 @@ $(document).ready(() => {
 		json = JSON.stringify({user: json});
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:4000/api/users",
+			url: "https://dutiful-accomplished-arthropods.gigalixirapp.com/api/users",
 			data: json,
 			success: () =>
 				window.location.href = "index.html",
