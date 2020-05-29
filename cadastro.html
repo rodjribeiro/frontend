@@ -4,36 +4,42 @@
 	<meta charset="utf-8">
 	<title>Cadastro</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div>
 		<h1>Formulário - Cadastro das Comissões</h1>
-		<form id="form" method="post" >
-			<label for="nome">Nome da Comissão</label><br>
-			<input type="text" id="name" placeholder="Nome"><br>
+		<form id="form">
+			<label for="comissao">Nome da Comissão</label><br>
+			<input required type="text" id="comissao" name="comissao"
+			placeholder="Comissao"><br>
 
 			<label for="empresa">Empresa Contratada</label><br>
-			<input type="text" id="empresa" placeholder="Empresa"><br>
+			<input required type="text" id="empresa" name="empresa"
+			placeholder="Empresa"><br>
 
 			<label for="gastos">Gastos</label><br>
-			<input type="text" id="gastos" placeholder="Gastos"><br>
+			<input required type="text" id="gastos" name="gastos"
+			placeholder="0000.00"><br>
 
-			<label for="ano">Semestre da formatura</label><br>
-			<input type="text" id="ano" placeholder="Primeiro/Segundo/Ano"><br>
+			<label for="turma">Semestre da formatura</label><br>
+			<input required type="text" id="turma" name="turma"
+			placeholder="35"><br>
 
-			<label for="preco">Preço da adesão</label><br>
-			<input type="text" id="price" placeholder="R$ 00,00"><br>
+			<label for="adesao">Preço da adesão</label><br>
+			<input required type="text" id="adesao" name="adesao"
+			placeholder="0000.00"><br>
 
 			<label for="email">Email</label><br>
-			<input type="email" id="email" placeholder="xpto@email.com"><br>
-			<input type="submit" value="Submit">
+			<input required type="email" id="email" name="email"
+			placeholder="xpto@email.com"><br>
+
+			<input type="submit" value="Cadastrar">
 		</form>
 	</div>
 	<a href="index.html">Voltar</a>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="js/cadastro.js"></script>
 </body>
 </html>
